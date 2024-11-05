@@ -9,6 +9,6 @@ Arbitrary file reading with [SparseRestore](https://github.com/JJTech0130/TrollR
 5. Look for a `BroccoliAnalytics.txt` file with the name of your chosen file, you should see the contents of the file you chose. From here, you can share and save the contents of the file.
 
 ## Credits
-- [Duy Tran](https://github.com/khanhduytran0) and [hrtowii](https://github.com/hrtowii) for assistance with restoring to the Analytics Data folder.
+- [Duy Tran](https://github.com/khanhduytran0) for publishing [details](https://gist.github.com/khanhduytran0/e2e0bf9dfa5deb2e00f397bdab8ec37f#exploit-1-symlinks-showing-up-in-analytics-data) on the exploit.
 - [JJTech/the TrollRestore authors](https://github.com/JJTech0130/TrollRestore) for SparseRestore.
 - The FEMBOY_ENTHUSIASTS team for assistance and support.
