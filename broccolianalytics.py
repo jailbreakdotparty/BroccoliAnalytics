@@ -19,13 +19,12 @@ def create_haxxed_symlink(filename: str, target_fp: str):
             mb.restore(backup_dir, system=True, reboot=False, copy=False, source=".")
 
 print("""
-         BroccoliAnalytics v1.0
-            Written by Skadz
-   Special thanks to Duy Tran and hrtowii
+        BroccoliAnalytics v1.1
+  Written by the jailbreak.party team
+    Exploit discovered by Duy Tran
 """)
 target = input("Enter the full path to the file you'd like to read: ")
 filename = target.split('/')[-1]
-print(f"filename: {filename}")
 create_haxxed_symlink(filename=filename, target_fp=target)
 print(f"Success! (probably)\nYou should see a BrocoAnalytics-{filename}.txt file under Analytics Data in Settings.")
 exit()
